@@ -1,18 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEditor;
 
-public class CubeEditor : MonoBehaviour
+[CustomEditor(typeof(Cube))]
+public class CubeEditor : Editor
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void OnInspectorGUI()
     {
-        
-    }
+        base.OnInspectorGUI();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Cube cube = (Cube)target;
+
+        GUILayout.BeginHorizontal();
+            if (GUILayout.Button("Generate Colour"))
+            {
+                cube.GenerateColour();
+                Debug.Log("Button was pressed");
+
+            }
+
+            if (GUILayout.Button("Reset"))
+            {
+                cube.Reset();
+            }
+        GUILayout.EndHorizontal();
     }
 }
