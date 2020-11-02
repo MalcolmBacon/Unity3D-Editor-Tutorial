@@ -8,4 +8,6 @@ public class ColourPointTesting : MonoBehaviour
     public ColourPoint[] points;
     public Vector3 vector;
     public Vector3[] vectors;
+    [TextArea]
+    public string text = "This is some text";
 }
