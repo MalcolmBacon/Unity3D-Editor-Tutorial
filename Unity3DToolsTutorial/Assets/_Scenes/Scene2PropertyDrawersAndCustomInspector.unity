@@ -268,6 +268,62 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &292012627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 292012629}
+  - component: {fileID: 292012628}
+  m_Layer: 0
+  m_Name: ListTesting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &292012628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292012627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e8c9acd01c4e94ca1f6c0e5997bf6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  integers: 33000000
+  vectors:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  colourPoints:
+  - colour:
+      r: 0.7264151
+      g: 0.08566215
+      b: 0.08566215
+      a: 0
+    position: {x: 0, y: 0, z: 0}
+  objects:
+  - {fileID: 0}
+--- !u!4 &292012629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292012627}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.13474512, y: 6.752134, z: -6.3331656}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &616908757
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +606,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 65492999428859587, guid: 92b548f32fb8ec94eb29f968e276188f, type: 3}
       propertyPath: points.Array.data[3].colour.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65492999428859587, guid: 92b548f32fb8ec94eb29f968e276188f, type: 3}
+      propertyPath: point.colour.r
+      value: 0.70980394
+      objectReference: {fileID: 0}
+    - target: {fileID: 65492999428859587, guid: 92b548f32fb8ec94eb29f968e276188f, type: 3}
+      propertyPath: point.colour.g
+      value: 0.8431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 65492999428859587, guid: 92b548f32fb8ec94eb29f968e276188f, type: 3}
+      propertyPath: point.colour.b
+      value: 0.9725491
+      objectReference: {fileID: 0}
+    - target: {fileID: 65492999428859587, guid: 92b548f32fb8ec94eb29f968e276188f, type: 3}
+      propertyPath: point.colour.a
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1219248736666056425, guid: 92b548f32fb8ec94eb29f968e276188f, type: 3}

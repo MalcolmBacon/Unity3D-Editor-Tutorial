@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CustomPropertyDrawer(typeof(ColorPoint))]
+[CustomPropertyDrawer(typeof(ColourPoint))]
 public class ColourPointDrawer : PropertyDrawer
 {
     // position -> area of the window we should use to draw property
@@ -11,6 +11,7 @@ public class ColourPointDrawer : PropertyDrawer
     // label -> GUIContent that defines the label we should use for the property
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
+        int oldIndentLevel = EditorGUI.indentLevel;
         label = EditorGUI.BeginProperty(position, label, property); // Allow for right clicking on array elements 
         Rect contentPosition = EditorGUI.PrefixLabel(position, label);
         // Detect that we're using two lines by checking the height of position rect
@@ -22,7 +23,6 @@ public class ColourPointDrawer : PropertyDrawer
             contentPosition.y += 18f; // Move down a line after property label is drawn 
         }
         contentPosition.width *= 0.75f; // Make only take up 75% of space so that we can fit colour
-        int indent = EditorGUI.indentLevel; 
         EditorGUI.indentLevel = 0;// Don't make child fields be indented
         EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("position"), GUIContent.none); // GUIContent.none gets rid of original label
         contentPosition.x += contentPosition.width;
@@ -34,7 +34,7 @@ public class ColourPointDrawer : PropertyDrawer
 
     
         // Reset indenting 
-        EditorGUI.indentLevel = indent;
+        EditorGUI.indentLevel = oldIndentLevel;
     }
     // Seperate method so that height of drawer can be queried before it is drawn 
     // ie. can be used to determine whether a scrollbar is needed because the content

@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [Serializable]
-public class ColorPoint
+public class ColourPoint
 {
     public Color colour;
     public Vector3 position;
